@@ -11,6 +11,7 @@ Vous utiliserez ce repo : https://github.com/aballiet/DevOps-Dauphine-TP comme b
 ## 2. Cloner VOTRE copie du repo
 
 Clonez le avec `git clone` depuis Cloud Shell et tentez un commit pour vérifier que tout fonctionne !
+Test
 
 ## 3. Créer la base de données MySQL sur votre projet GCP
 
