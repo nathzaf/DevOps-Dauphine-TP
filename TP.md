@@ -245,6 +245,9 @@ On refait gcloud builds submit --config=cloudbuild.yaml .
 
    4. Rendez vous sur l'adresse IP publique du service kubernetes Wordpress et vérifiez que Wordpress fonctionne 🔥
 
+   ![alt text](image-18.png)
+   ![alt text](image-19.png)
+
 
 ## BONUS : Partie 4
 

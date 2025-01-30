@@ -91,3 +91,18 @@ resource "google_cloud_run_service_iam_policy" "noauth" {
 
    depends_on = [google_cloud_run_service.wordpress]
 }
+
+
+data "google_client_config" "default" {}
+
+data "google_container_cluster" "my_cluster" {
+  name     = "gke-dauphine"
+  location = "us-central1-a"
+}
+
+provider "kubernetes" {
+  host                   = "https://${data.google_container_cluster.my_cluster.endpoint}"
+  token                  = data.google_client_config.default.access_token
+  cluster_ca_certificate = base64decode(data.google_container_cluster.my_cluster.master_auth.0.cluster_ca_certificate)
+}
+
