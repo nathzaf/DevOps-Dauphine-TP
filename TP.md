@@ -105,13 +105,18 @@ pwd
    2. Avec la commande `curl`, faites une requêtes depuis votre machine hôte à votre container wordpress. Quelle est la réponse ? (il n'y a pas piège, essayez sur un port non utilisé pour constater la différence)
 
 ![alt text](image-8.png)
-git
+
    3. Afficher les logs de votre container après avoir fait quelques requêtes, que voyez vous ?
+
+![alt text](image-9.png)
+
    4. Utilisez l'aperçu web pour afficher le résultat du navigateur qui se connecte à votre container wordpress
       1. Utiliser la fonction `Aperçu sur le web`
         ![web_preview](images/wordpress_preview.png)
       2. Modifier le port si celui choisi n'est pas `8000`
       3. Une fenètre s'ouvre, que voyez vous ?
+
+      ![alt text](image-10.png)
 
 4. A partir de la documentation, remarquez les paramètres requis pour la configuration de la base de données.
 
@@ -123,7 +128,12 @@ git
         - `WORDPRESS_DB_NAME=wordpress`
         - `WORDPRESS_DB_HOST=0.0.0.0`
    3. Construire l'image docker.
+
+![alt text](image-11.png)
+
    4. Lancer une instance de l'image, ouvrez un shell. Vérifier le résultat de la commande `echo $WORDPRESS_DB_PASSWORD`
+
+![alt text](image-12.png)
 
 6. Pipeline d'Intégration Continue (CI):
    1. Créer un dépôt de type `DOCKER` sur artifact registry (si pas déjà fait, sinon utiliser celui appelé `website-tools`)
