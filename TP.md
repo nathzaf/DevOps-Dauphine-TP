@@ -137,8 +137,13 @@ pwd
 
 6. Pipeline d'Intégration Continue (CI):
    1. Créer un dépôt de type `DOCKER` sur artifact registry (si pas déjà fait, sinon utiliser celui appelé `website-tools`)
+
+On va utiliser "demo-repository" tel que défini dans main.tf
+
    2. Créer une configuration cloudbuild pour construire l'image docker et la publier sur le depôt Artifact Registry
    3. Envoyer (`submit`) le job sur Cloud Build et vérifier que l'image a bien été créée
+
+   ![alt text](image-13.png)
 
 ## Partie 3 : Déployer Wordpress sur Cloud Run puis Kubernetes 🔥
 
